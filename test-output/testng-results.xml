@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107888" started-at="2016-11-30T04:13:57Z" finished-at="2016-11-30T04:15:45Z">
+  <suite name="Default suite" duration-ms="88149" started-at="2016-11-30T12:49:46Z" finished-at="2016-11-30T12:51:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107888" started-at="2016-11-30T04:13:57Z" finished-at="2016-11-30T04:15:45Z">
+    <test name="Default test" duration-ms="88149" started-at="2016-11-30T12:49:46Z" finished-at="2016-11-30T12:51:14Z">
       <class name="Test.CheckOrientation">
-        <test-method status="PASS" signature="checkIfAllElementsExist()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfAllElementsExist" duration-ms="107464" started-at="2016-11-29T20:13:57Z" finished-at="2016-11-29T20:15:44Z">
+        <test-method status="PASS" signature="checkIfAllElementsExist()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfAllElementsExist" duration-ms="25243" started-at="2016-11-30T04:49:46Z" finished-at="2016-11-30T04:50:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkIfAllElementsExist -->
-        <test-method status="PASS" signature="checkIfDataisPersisted()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfDataisPersisted" duration-ms="397" started-at="2016-11-29T20:15:44Z" finished-at="2016-11-29T20:15:45Z">
+        <test-method status="PASS" signature="checkIfDataisPersisted()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfDataisPersisted" duration-ms="62870" started-at="2016-11-30T04:50:12Z" finished-at="2016-11-30T04:51:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkIfDataisPersisted -->

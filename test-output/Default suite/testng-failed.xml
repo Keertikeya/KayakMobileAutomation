@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Test.TestAppium">
+      <class name="Test.CheckOrientation">
         <methods>
-          <include name="setUp"/>
+          <include name="checkIfDataisPersisted"/>
         </methods>
-      </class> <!-- Test.TestAppium -->
+      </class> <!-- Test.CheckOrientation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

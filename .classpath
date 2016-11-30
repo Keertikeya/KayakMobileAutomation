@@ -5,5 +5,7 @@
 	<classpathentry kind="lib" path="C:/Users/Sagar/Downloads/selenium-server-standalone-3.0.1.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Sagar/Downloads/java-client-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sagar/Downloads/android-support-v4.jar/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sagar/Downloads/uiautomator.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

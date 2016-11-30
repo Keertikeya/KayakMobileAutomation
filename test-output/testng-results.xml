@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="94506" started-at="2016-11-30T03:23:15Z" finished-at="2016-11-30T03:24:50Z">
+  <suite name="Default suite" duration-ms="107888" started-at="2016-11-30T04:13:57Z" finished-at="2016-11-30T04:15:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="94506" started-at="2016-11-30T03:23:15Z" finished-at="2016-11-30T03:24:50Z">
-      <class name="Test.TestAppium">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.TestAppium@18be83e4]" name="setUp" duration-ms="94471" started-at="2016-11-29T19:23:15Z" finished-at="2016-11-29T19:24:50Z">
+    <test name="Default test" duration-ms="107888" started-at="2016-11-30T04:13:57Z" finished-at="2016-11-30T04:15:45Z">
+      <class name="Test.CheckOrientation">
+        <test-method status="PASS" signature="checkIfAllElementsExist()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfAllElementsExist" duration-ms="107464" started-at="2016-11-29T20:13:57Z" finished-at="2016-11-29T20:15:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-      </class> <!-- Test.TestAppium -->
+        </test-method> <!-- checkIfAllElementsExist -->
+        <test-method status="PASS" signature="checkIfDataisPersisted()[pri:0, instance:Test.CheckOrientation@224edc67]" name="checkIfDataisPersisted" duration-ms="397" started-at="2016-11-29T20:15:44Z" finished-at="2016-11-29T20:15:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkIfDataisPersisted -->
+      </class> <!-- Test.CheckOrientation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

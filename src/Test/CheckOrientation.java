@@ -56,7 +56,7 @@ public class CheckOrientation {
 
 			// Set android deviceName desired capability. Set it Android
 			// Emulator.
-			capabilities.setCapability("deviceName", "emulator-5554");
+			capabilities.setCapability("deviceName", "TA44909IZI");
 
 			// Set your emulator's android version.
 			capabilities.setCapability("platformVersion", "5.1");
@@ -85,20 +85,26 @@ public class CheckOrientation {
 	@Test
 	public void test1CheckIfAllElementsExist() {
 		try {
+			System.out.println("**************************************************");
+			System.out.println("             Test Case No: 1\n");
 			// Created object of RemoteWebDriver will all set capabilities.
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			// closeButton();
+			closeButton();
 			clickLooksGoodBtn();
 			checkIfHomeScreen();
 			System.out.println("--Current screen orientation Is : " + ((AndroidDriver) driver).getOrientation());
 			checkIfAllElementsExists();
 			((AndroidDriver) driver).rotate(org.openqa.selenium.ScreenOrientation.LANDSCAPE);
 			System.out.println("--Current screen orientation Is : " + ((AndroidDriver) driver).getOrientation());
-			// closeUpdateButton();
+			//closeUpdateButton();
 			checkIfAllElementsExists();
+			System.out.println("             Result: Test Case No: 1 Passed\n"
+					+ "**************************************************\n");
 		} catch (Exception ex) {
 			System.out.println("Unexpected error occured!");
+			System.out.println("********************\n" + "             Test Case No: 1\n" + "             Result: Test Case Failed\n"
+					+ "********************\n");
 			ex.printStackTrace();
 		}
 	}
@@ -110,7 +116,10 @@ public class CheckOrientation {
 	public void test2CheckIfDataisPersisted() {
 		try {
 			// closeUpdateButton();
-			System.out.println("Test 3 --Current screen orientation Is : " + ((AndroidDriver) driver).getOrientation());
+			// System.out.println("Test 3 --Current screen orientation Is : " +
+			// ((AndroidDriver) driver).getOrientation());
+			System.out.println("**************************************************");
+			System.out.println("             Test Case No: 2\n");
 			((AndroidDriver) driver).rotate(org.openqa.selenium.ScreenOrientation.PORTRAIT);
 
 			String roomGuestslayout = "com.kayak.android:id/roomsGuestsRow";
@@ -123,16 +132,16 @@ public class CheckOrientation {
 				WebElement incrementroomsElement = driver.findElementById(incrementrooms);
 				if (incrementroomsElement.isDisplayed()) {
 					incrementroomsElement.click();
+//					System.out.println("Increment rooms clicked");
 				} else {
 					System.out.println(" Increment Rooms Element Textview is Hidden");
 				}
+				// Increment Guests value
 
-				// Increment Guests
 				String incrementGuests = "com.kayak.android:id/incrementGuests";
 				WebElement incrementGuestsElement = driver.findElementById(incrementGuests);
 				if (incrementGuestsElement.isDisplayed()) {
 					incrementGuestsElement.click();
-					// orignalguestsvalue = incrementGuestsElement.getText();
 				} else {
 					System.out.println(" Increment Guests Element Textview is Hidden");
 				}
@@ -140,30 +149,37 @@ public class CheckOrientation {
 				// Click OK after incrementing values
 				String okbtn = "android:id/button1";
 				WebElement okbtnElement = driver.findElementById(okbtn);
+//				System.out.println("OK clicked");
 				okbtnElement.click();
 
 				// Get the values just SET
 				String originalroomguestvalue = getRoomGuestValues();
-				System.out.println("originalroomguestvalue~~~~~~ " + originalroomguestvalue);
+				System.out.println("Original room-guest Value: " + originalroomguestvalue);
 				// Now change the orientation.
-				System.out.println("Now changing the orientation ++");
+				System.out.println("Now changing the screen orientation");
 				org.openqa.selenium.ScreenOrientation currorientation = ((AndroidDriver) driver).getOrientation();
 				switch (currorientation) {
 				case PORTRAIT:
 					((AndroidDriver) driver).rotate(org.openqa.selenium.ScreenOrientation.LANDSCAPE);
+					Thread.sleep(5000);
 				case LANDSCAPE:
 					((AndroidDriver) driver).rotate(org.openqa.selenium.ScreenOrientation.PORTRAIT);
+					Thread.sleep(5000);
 				}
 
 				String rotatedroomguestvalue = getRoomGuestValues();
-				System.out.println("rotatedroomguestvalue~~~~~~~~~~~~ " + rotatedroomguestvalue);
+				System.out.println("Rotated room-guest Value: " + rotatedroomguestvalue);
 
 				// now extract the values to check if they are retained.
 				Assert.assertEquals(originalroomguestvalue, rotatedroomguestvalue);
 			} else {
-				System.out.println("Room guests Textview is Hidden");
+				System.out.println("Room guests Textview is Hidden\n");
 			}
+			System.out.println("             Result: Test Case No: 2 Passed\n"
+					+ "**************************************************\n");
 		} catch (Exception e) {
+			System.out.println("********************\n" + "             Test Case No: 2\n" + "             Result: Test Case Failed\n"
+					+ "********************\n");
 			System.out.println("Error in Test2 : CheckIfDataisPersisted");
 			e.printStackTrace();
 		}
@@ -181,7 +197,6 @@ public class CheckOrientation {
 			System.out.println("Error while quitting the driver ");
 			ex.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -314,7 +329,7 @@ public class CheckOrientation {
 			String looksGoodBtn = "android:id/button1";
 			WebElement looksGoodView = driver.findElement((By.id(looksGoodBtn)));
 			if (looksGoodView.isDisplayed()) {
-				System.out.println("LooksGood present");
+//				System.out.println("LooksGood present");
 				looksGoodView.click();
 			} else {
 				System.out.println("LooksGood absent");
@@ -336,7 +351,7 @@ public class CheckOrientation {
 			String homeScreenToolbar = "com.kayak.android:id/toolbar";
 			WebElement homeToolBar = driver.findElement((By.id(homeScreenToolbar)));
 			if (homeToolBar.isDisplayed()) {
-				System.out.println("HomeScreen present");
+//				System.out.println("HomeScreen present");
 			} else {
 				System.out.println("HomeScreen absent");
 			}
@@ -360,7 +375,7 @@ public class CheckOrientation {
 				System.out.println("No close button found. Throwing ==> " + nse);
 			}
 			if (crsbtn.isDisplayed()) {
-				System.out.println("Crossbtn present");
+//				System.out.println("Crossbtn present");
 				crsbtn.click();
 			} else {
 				System.out.println("Crossbtn absent");
